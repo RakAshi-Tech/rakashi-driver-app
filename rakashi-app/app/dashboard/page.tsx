@@ -57,9 +57,7 @@ export default function HomePage() {
   const firstPendingJob = mockJobs.find((job) => job.status === "pending")
 
   const handleStartNextJob = () => {
-    if (firstPendingJob) {
-      router.push(`/job/${firstPendingJob.id}`)
-    }
+    router.push("/ocr")
   }
 
   return (
@@ -89,7 +87,7 @@ export default function HomePage() {
             <Truck className="h-5 w-5 text-primary" />
             <span className="text-sm font-semibold text-foreground">DriverHub</span>
           </div>
-          
+
           {/* Language Toggle */}
           <div className="flex items-center bg-secondary rounded-md p-0.5">
             <button
